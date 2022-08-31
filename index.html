@@ -42,7 +42,7 @@
         </h3>
         <h2>The Backtracking Algorithm.</h2>
         <pre> 
-         boolean solve(Node n) {
+         boolean solve(Node n){
             if n is a leaf node { if the leaf is a goal node, return true 
                else return false
            } else { 
@@ -63,15 +63,18 @@
     </ul>
     <p>Hence, to decide whether any non-leaf node n is solvable (part of a path to a goal node), all you have to do is test whether any child of n is solvable. This is done recursively, on each child of n. In the above code, this is done by the lines</p>
         <pre> 
-    for each child c of n {
+          for each child c of n {
         if solve(c) succeeds, return true
        }
-       return false</pre>
+       return false
+       </pre>
        <p>Eventually the recursion will "bottom" out at a leaf node. If the leaf node is a goal node, it is solvable; if the leaf node is not a goal node, it is not solvable. This is our base case. In the above code, this is done by the lines</p>
-       <pre>   if n is a leaf node{
+       <pre> 
+       if n is a leaf node{
         if the leaf is a goal node, return true
          else return false
-        }</pre>
+        }
+        </pre>
         <p>The backtracking algorithm is simple but important. You should understand it thoroughly. Another way of stating it is as follows:</p>
         <ul>
             <li>To search tree:</li>
